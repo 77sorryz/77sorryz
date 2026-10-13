@@ -1,0 +1,47 @@
+# Atualiza as imagens vivas do perfil e publica no branch `output` (o histórico do main fica limpo):
+# - status-dark.svg / status-light.svg: o que está tocando no Spotify ou o jogo aberto (via Lanyard)
+# - snake.svg / snake-dark.svg: a cobra comendo o gráfico de contribuições
+name: perfil
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: perfil
+  cancel-in-progress: true
+
+jobs:
+  imagens:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Cartão de status do Discord
+        run: node scripts/status.mjs dist
+
+      - name: Cobra das contribuições
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg?color_snake=#3D7BFF&color_dots=#ebedf0,#c6d6ff,#8fb0ff,#5a8fff,#3D7BFF
+            dist/snake-dark.svg?palette=github-dark&color_snake=#3D7BFF&color_dots=#161b22,#16264a,#1f3e86,#2f5fd0,#3D7BFF
+
+      - name: Publicar no branch output
+        run: |
+          cd dist
+          git init -q -b output
+          git add .
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -q -m "imagens do perfil"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" output
