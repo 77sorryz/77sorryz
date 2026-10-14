@@ -1,11 +1,12 @@
 # Atualiza as imagens vivas do perfil e publica no branch `output` (o histórico do main fica limpo):
 # - status-dark.svg / status-light.svg: o que está tocando no Spotify ou o jogo aberto (via Lanyard)
+# - recent.json: as últimas músicas ouvidas (lido pelo portfólio)
 # - snake.svg / snake-dark.svg: a cobra comendo o gráfico de contribuições
 name: perfil
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/10 * * * *"
   workflow_dispatch:
   push:
     branches: [main]

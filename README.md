@@ -32,7 +32,7 @@ Do banco de dados ao app instalável, com o mesmo cuidado no código e no que ap
   </picture>
 </a>
 
-<sub>Lido do Discord a cada 30 minutos por uma GitHub Action deste repositório.</sub>
+<sub>Lido do Discord a cada 10 minutos por uma GitHub Action deste repositório.</sub>
 
 <br><br>
 

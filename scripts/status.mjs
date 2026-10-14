@@ -77,4 +77,21 @@ function card(dark) {
 
 fs.writeFileSync(`${out}/status-dark.svg`, card(true));
 fs.writeFileSync(`${out}/status-light.svg`, card(false));
+
+// histórico das músicas: o branch output é refeito a cada execução, então o arquivo anterior é lido de lá,
+// a música atual entra no topo (sem repetir) e ficam as 12 mais recentes. Usado pelo portfólio.
+const RECENT = "https://raw.githubusercontent.com/77sorryz/77sorryz/output/recent.json";
+let recent = [];
+try {
+  const r = await fetch(`${RECENT}?t=${Date.now()}`);
+  if (r.ok) recent = (await r.json()).tracks ?? [];
+} catch {}
+if (d?.listening_to_spotify && d.spotify?.track_id) {
+  const s = d.spotify;
+  recent = [
+    { id: s.track_id, song: s.song, artist: s.artist.replace(/;\s*/g, ", "), album: s.album, art: s.album_art_url, at: Date.now() },
+    ...recent.filter((x) => x.id !== s.track_id),
+  ].slice(0, 12);
+}
+fs.writeFileSync(`${out}/recent.json`, JSON.stringify({ updated: Date.now(), tracks: recent }, null, 1));
 console.log(kind, title);
