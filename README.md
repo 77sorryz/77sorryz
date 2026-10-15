@@ -7,7 +7,7 @@
 </picture>
 
 <p align="center">
-  <img alt="" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3200&pause=1000&color=3D7BFF&center=true&vCenter=true&width=720&height=36&lines=Sistemas+que+rodam+neg%C3%B3cio+de+verdade;Ferramentas+com+IA+para+o+dia+a+dia;Interfaces+com+hierarquia+e+movimento;Valorant+%C2%B7+Nolan+%C2%B7+fic%C3%A7%C3%A3o+cient%C3%ADfica">
+  <img alt="" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3200&pause=1000&color=3D7BFF&center=true&vCenter=true&width=720&height=36&lines=Sistemas+que+rodam+neg%C3%B3cio+de+verdade;Ferramentas+com+IA+para+o+dia+a+dia;Apps+desktop+que+fazem+cada+tecla+soar;Interfaces+com+hierarquia+e+movimento;Valorant+%C2%B7+Nolan+%C2%B7+fic%C3%A7%C3%A3o+cient%C3%ADfica">
 </p>
 
 <p align="center">
@@ -36,7 +36,7 @@ Do banco de dados ao app instalável, com o mesmo cuidado no código e no que ap
 
 <br><br>
 
-### `02` · Projeto em destaque
+### `02` · Projetos
 
 <table>
   <tr>
@@ -61,13 +61,36 @@ Do banco de dados ao app instalável, com o mesmo cuidado no código e no que ap
       </picture>
     </td>
   </tr>
+  <tr>
+    <td width="56%">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/sorryhub-dark.jpg">
+        <source media="(prefers-color-scheme: light)" srcset="assets/sorryhub-light.jpg">
+        <img alt="Início do sorry hub: WPM ao vivo, sinal, mapa de calor, Discord e ideias" src="assets/sorryhub-dark.jpg" width="100%">
+      </picture>
+    </td>
+    <td width="44%" valign="top">
+      <h3>sorry<span>.</span> hub</h3>
+      <p>App desktop para Windows: cada tecla vira o som de um teclado mecânico e, em volta disso, um hub do dia a dia.</p>
+      <p>
+        ▸ 54 pacotes de som de teclados reais<br>
+        ▸ WPM ao vivo, sinal e mapa de calor das teclas<br>
+        ▸ App em foco, tempo jogado e perfis automáticos<br>
+        ▸ Histórico local: só contagens, nunca texto<br>
+        ▸ Overlay no jogo, Rich Presence e atualização sozinha
+      </p>
+      <p><img alt="Electron, React, TypeScript, Tailwind, Vite" src="https://skillicons.dev/icons?i=electron,react,ts,tailwind,vite&perline=5" height="34"></p>
+      <p><a href="https://github.com/77sorryz/sorry-mech-releases/releases/latest"><img alt="Baixar para Windows" src="https://img.shields.io/github/v/release/77sorryz/sorry-mech-releases?style=for-the-badge&label=Baixar%20para%20Windows&color=3D7BFF&labelColor=0E1015"></a></p>
+      <sub>Código privado · telas reais com dados de demonstração</sub>
+    </td>
+  </tr>
 </table>
 
 <br>
 
 ### `03` · Ferramentas
 
-<img alt="TypeScript, React, Node.js, Express, PostgreSQL, Python, Tailwind, Vite, VS Code, Photoshop, Git, GitHub" src="https://skillicons.dev/icons?i=ts,react,nodejs,express,postgres,python,tailwind,vite,vscode,ps,git,github&perline=12">
+<img alt="TypeScript, React, Node.js, Express, PostgreSQL, Python, Electron, Tailwind, Vite, VS Code, Photoshop, Git, GitHub" src="https://skillicons.dev/icons?i=ts,react,nodejs,express,postgres,python,electron,tailwind,vite,vscode,ps,git,github&perline=13">
 
 Com **Claude** como parceiro de código, do plano ao teste.
 
