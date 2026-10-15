@@ -80,7 +80,6 @@ Do banco de dados ao app instalável, com o mesmo cuidado no código e no que ap
         ▸ Overlay no jogo, Rich Presence e atualização sozinha
       </p>
       <p><img alt="Electron, React, TypeScript, Tailwind, Vite" src="https://skillicons.dev/icons?i=electron,react,ts,tailwind,vite&perline=5" height="34"></p>
-      <p><a href="https://github.com/77sorryz/sorry-mech-releases/releases/latest"><img alt="Baixar para Windows" src="https://img.shields.io/github/v/release/77sorryz/sorry-mech-releases?style=for-the-badge&label=Baixar%20para%20Windows&color=3D7BFF&labelColor=0E1015"></a></p>
       <sub>Código privado · telas reais com dados de demonstração</sub>
     </td>
   </tr>
